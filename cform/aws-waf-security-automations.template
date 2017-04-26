@@ -675,14 +675,8 @@
           "Fn::GetAtt": ["LambdaRoleLogParser", "Arn"]
         },
         "Code": {
-          "S3Bucket": {
-            "Fn::Join": ["", [
-              "solutions-", {
-                "Ref": "AWS::Region"
-              }
-            ]]
-          },
-          "S3Key": "aws-waf-security-automations/v1/log-parser.zip"
+          "S3Bucket": "giftbit-resources",
+          "S3Key": "aws-waf-security-automations/log-parser.zip"
         },
         "Runtime": "python2.7",
         "MemorySize": "512",
@@ -830,14 +824,8 @@
           ]
         },
         "Code": {
-          "S3Bucket": {
-            "Fn::Join": ["", [
-              "solutions-", {
-                "Ref": "AWS::Region"
-              }
-            ]]
-          },
-          "S3Key": "aws-waf-security-automations/v2/reputation-lists-parser.zip"
+          "S3Bucket": "giftbit-resources",
+          "S3Key": "aws-waf-security-automations/reputation-lists-parser.zip"
         },
         "Runtime": "nodejs4.3",
         "MemorySize": "128",
@@ -1012,14 +1000,8 @@
           "Fn::GetAtt": ["LambdaRoleBadBot", "Arn"]
         },
         "Code": {
-          "S3Bucket": {
-            "Fn::Join": ["", [
-              "solutions-", {
-                "Ref": "AWS::Region"
-              }
-            ]]
-          },
-          "S3Key": "aws-waf-security-automations/v1/access-handler.zip"
+          "S3Bucket": "giftbit-resources",
+          "S3Key": "aws-waf-security-automations/access-handler.zip"
         },
         "Runtime": "python2.7",
         "MemorySize": "128",
@@ -1290,14 +1272,8 @@
           "Fn::GetAtt": ["LambdaRoleCustomResource", "Arn"]
         },
         "Code": {
-          "S3Bucket": {
-            "Fn::Join": ["", [
-              "solutions-", {
-                "Ref": "AWS::Region"
-              }
-            ]]
-          },
-          "S3Key": "aws-waf-security-automations/v2/custom-resource.zip"
+          "S3Bucket": "giftbit-resources",
+          "S3Key": "aws-waf-security-automations/custom-resource.zip"
         },
         "Runtime": "python2.7",
         "MemorySize": "128",
